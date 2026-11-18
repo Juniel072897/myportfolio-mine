@@ -1,67 +1,50 @@
-/** Identity, hero copy, and about copy — sourced from the live portfolio. */
+/** Identity, hero copy, and about copy for Juniel Tejoc. */
 
-import avatar from '../assets/avatar.jpg';
+import avatar from '../assets/Juniel.png';
 import type { Stat } from './types';
 
 export const profile = {
-  name: 'Dave Oyangorin',
-  /** Positioning used in metadata, JSON-LD jobTitle, and the hero. */
-  title: 'Web Developer, SEO Specialist & Automation Specialist',
-  shortTitle: 'Website, SEO & Automation Specialist',
-  /** The hero headline, one role per line. */
-  heroRoles: ['Web Developer', 'SEO Specialist', 'Automation Specialist'],
+  name: 'Juniel Tejoc',
+  title: 'WordPress Developer & SEO Specialist',
+  shortTitle: 'WordPress Developer & SEO Specialist',
+  heroRoles: ['WordPress Developer', 'SEO Specialist'],
   location: 'Negros Oriental, Philippines',
-
-  heroHeadline:
-    'Websites that look sharp, load fast, and earn their place in search results.',
+  heroHeadline: 'Websites that perform, rank, and turn visitors into customers.',
   heroStatement:
-    'I build high-performing websites, optimize search visibility, and develop automation solutions that help businesses work smarter. My expertise combines front-end development, WordPress, technical SEO, CRM integrations, and workflow automation.',
-
+    "I'm a WordPress Developer and SEO Specialist with 4+ years of experience building, maintaining, and optimizing websites. I specialize in WordPress development using Elementor and Gutenberg, alongside modern front-end development with Astro, JavaScript, Tailwind CSS, and Sanity CMS. I also help businesses improve their online visibility through technical SEO, on-page optimization, local SEO, website performance improvements, and search-focused content strategies.",
   about: [
-    "I'm a Web Developer, SEO Specialist, and Automation Specialist with experience building and optimizing business websites, marketing systems, and custom digital solutions.",
-    'I started in front-end and WordPress development, working with HTML, CSS, JavaScript, Vue.js, and Bootstrap, and with builders such as Elementor, Divi, Beaver Builder, and WPBakery. As I worked closer to the businesses behind those sites, the job grew to include SEO, analytics, Google Ads, and CRM platforms such as GoHighLevel.',
-    'My approach combines clean development, user-focused design, search engine optimization, and practical automation to deliver websites and systems that support real business goals.',
+    "I'm a WordPress Developer and SEO Specialist from Negros Oriental, Philippines, with 4+ years of experience creating, maintaining, and optimizing business websites.",
+    'My development work includes WordPress, Elementor, Gutenberg, Astro, JavaScript, Tailwind CSS, and Sanity CMS. I build responsive interfaces, reusable components, and maintainable website experiences.',
+    'My SEO work focuses on technical and on-page SEO, local search visibility, website performance, content structure, and analytics. I aim to help businesses attract relevant visitors, improve their search presence, and turn traffic into meaningful inquiries.',
   ],
-
-  /** How the work gets done. Each point is backed by the experience timeline. */
   approach: [
     {
-      title: 'Start from the requirement',
-      body: 'I work directly with clients and teams to pin down what the site, funnel, or automation has to do before I build it.',
+      title: 'Understand the goal',
+      body: 'I align the website structure, content, and functionality with the needs of the business and its visitors.',
     },
     {
       title: 'Build for every screen',
-      body: 'Responsive layouts, tested across desktop, tablet, and mobile, with bugs fixed before launch.',
+      body: 'I create responsive WordPress and modern front-end experiences that work across desktop, tablet, and mobile.',
     },
     {
-      title: 'Ship it measurable',
-      body: 'Technical SEO, structured data, GA4, and Google Tag Manager go in with the build, not after it.',
+      title: 'Improve search visibility',
+      body: 'I address technical SEO, on-page structure, local visibility, and performance to support organic growth.',
     },
     {
-      title: 'Automate the follow-up',
-      body: 'Forms connect to CRM pipelines and workflows, so leads are routed and followed up without manual work.',
+      title: 'Measure and refine',
+      body: 'I use analytics and search performance insights to identify issues and guide continuous improvements.',
     },
   ],
-
-  /** The opportunities Dave is looking for. */
   openTo:
-    'Remote full-time or contract roles in web development, SEO, and marketing automation, plus website and automation projects for agencies and businesses.',
-
+    'Remote WordPress development and SEO roles, contract opportunities, and website projects for agencies and businesses.',
   avatar,
-  avatarAlt: 'Portrait of Dave Oyangorin',
-
-  /** CTA label used on the hero button; see MISSING-CONTENT.md for the file. */
+  avatarAlt: 'Portrait of Juniel Tejoc',
   resumeLabel: 'Download CV',
 } as const;
 
-/**
- * Homepage counters. Derived strictly from content on the live site:
- * years from the WordPress skill, projects from the projects listing,
- * roles from the experience timeline, sites from the D3 role highlight.
- */
 export const stats: Stat[] = [
-  { label: 'Years building for the web', value: 6, suffix: '+' },
-  { label: 'Client projects shipped', value: 10, suffix: '+' },
-  { label: 'Client sites under SEO management', value: 12 },
-  { label: 'Professional roles', value: 4 },
+  { label: 'WordPress development experience', value: 4, suffix: '+' },
+  { label: 'Front-end development experience', value: 2, suffix: '+' },
+  { label: 'SEO experience', value: 1.5, suffix: '+' },
+  { label: 'Professional roles', value: 5 },
 ];

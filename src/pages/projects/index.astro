@@ -1,11 +1,40 @@
 ---
-/** Full project index with client-side filtering by tech tag. */
+/** Full project index with client-side filtering by industry. */
 import Layout from '../../layouts/Layout.astro';
 import ProjectCard from '../../components/ui/ProjectCard.astro';
 import { projects } from '../../data/projects';
 
+const FIRST_PROJECTS = [
+  'kmace-towing',
+  'bed-bugs-begone',
+  'american-southern-exterminating',
+  'evergreen-lawn-pest',
+  'heat-bed-bugs-landing',
+  'indy-trojan-roofing',
+  'top-bed-bug-pros',
+  'atlanta-bed-bug-experts',
+  'midwest-bed-bug',
+  'heat-tech-pest-control',
+  'heat-rx',
+  'chapman-plumbing',
+  'quarry-view-building-group',
+  'smile-well-dental',
+  'wpdllc',
+];
+
+const orderedProjects = [...projects].sort((a, b) => {
+  const aIndex = FIRST_PROJECTS.indexOf(a.slug);
+  const bIndex = FIRST_PROJECTS.indexOf(b.slug);
+
+  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+  if (aIndex !== -1) return -1;
+  if (bIndex !== -1) return 1;
+  return 0;
+});
+
+
 /** Every distinct tag across all projects, alphabetised, for the filter bar. */
-const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort((a, b) =>
+const allCategories = [...new Set(projects.map((project) => project.category))].sort((a, b) =>
   a.localeCompare(b),
 );
 ---
@@ -22,53 +51,17 @@ const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort((
       <h1 class="text-3xl font-medium sm:text-4xl">Projects</h1>
       <p class="mt-5 text-lg text-[var(--text-muted)]">
         {projects.length} client projects: websites, SEO, funnels, and CRM automation. Filter by the
-        technology behind each one.
+        industry each one serves.
       </p>
     </header>
 
-    <!-- Filter bar. Enhancement only: hidden under .no-js (see Layout.astro), which
-         the head script clears before first paint, so the bar never shifts the grid. -->
-    <div class="mt-10" data-reveal>
-      <h2 id="filter-heading" class="sr-only">Filter projects by technology</h2>
-      <div
-        class="flex flex-wrap gap-2"
-        role="group"
-        aria-labelledby="filter-heading"
-        data-filter-bar
-      >
-        <button
-          type="button"
-          data-filter="all"
-          aria-pressed="true"
-          class="rounded-full border border-[var(--border-subtle)] px-4 py-2 font-mono text-xs transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] aria-pressed:border-[var(--accent)] aria-pressed:bg-[var(--accent)] aria-pressed:text-[var(--accent-contrast)]"
-        >
-          All
-        </button>
-        {
-          allTags.map((tag) => (
-            <button
-              type="button"
-              data-filter={tag}
-              aria-pressed="false"
-              class="rounded-full border border-[var(--border-subtle)] px-4 py-2 font-mono text-xs transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] aria-pressed:border-[var(--accent)] aria-pressed:bg-[var(--accent)] aria-pressed:text-[var(--accent-contrast)]"
-            >
-              {tag}
-            </button>
-          ))
-        }
-      </div>
-    </div>
-
-    <!-- Announces filter results to screen readers. -->
-    <p class="sr-only" role="status" aria-live="polite" data-filter-status></p>
-
     <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-project-grid>
       {
-        projects.map((project, index) => (
+        orderedProjects.map((project, index) => (
           <div
             class="flex"
             data-reveal
-            data-project-tags={project.tags.join('|')}
+            data-project-category={project.category}
             style={`--reveal-delay: ${(index % 3) * 80}ms`}
           >
             <ProjectCard project={project} eager={index < 3} maxTags={4} />
@@ -83,43 +76,4 @@ const allTags = [...new Set(projects.flatMap((project) => project.tags))].sort((
   </div>
 </Layout>
 
-<script>
-  const bar = document.querySelector<HTMLElement>('[data-filter-bar]');
-  const grid = document.querySelector<HTMLElement>('[data-project-grid]');
-  const status = document.querySelector<HTMLElement>('[data-filter-status]');
-  const emptyState = document.querySelector<HTMLElement>('[data-empty-state]');
 
-  if (bar && grid) {
-
-    const buttons = bar.querySelectorAll<HTMLButtonElement>('[data-filter]');
-    const items = grid.querySelectorAll<HTMLElement>('[data-project-tags]');
-
-    const applyFilter = (filter: string) => {
-      let visible = 0;
-
-      items.forEach((item) => {
-        const tags = (item.dataset.projectTags ?? '').split('|');
-        const matches = filter === 'all' || tags.includes(filter);
-        item.hidden = !matches;
-        if (matches) visible += 1;
-      });
-
-      buttons.forEach((button) => {
-        button.setAttribute('aria-pressed', String(button.dataset.filter === filter));
-      });
-
-      if (emptyState) emptyState.classList.toggle('hidden', visible > 0);
-
-      if (status) {
-        status.textContent =
-          filter === 'all'
-            ? `Showing all ${visible} projects.`
-            : `Showing ${visible} ${visible === 1 ? 'project' : 'projects'} tagged ${filter}.`;
-      }
-    };
-
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => applyFilter(button.dataset.filter ?? 'all'));
-    });
-  }
-</script>

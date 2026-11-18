@@ -18,6 +18,21 @@ import totalhomeinteriorsImg from '../assets/projects/totalhomeinteriors.avif';
 import txconcretelevelingImg from '../assets/projects/txconcreteleveling.png';
 import { caseStudies } from './caseStudies';
 import type { Project } from './types';
+import img_kmace_towing from '../assets/projects/kmace-towing.png';
+import img_bed_bugs_begone from '../assets/projects/bed-bugs-begone.png';
+import img_american_southern_exterminating from '../assets/projects/american-southern-exterminating.png';
+import img_evergreen_lawn_pest from '../assets/projects/evergreen-lawn-pest.png';
+import img_heat_bed_bugs_landing from '../assets/projects/heat-bed-bugs-landing.png';
+import img_indy_trojan_roofing from '../assets/projects/indy-trojan-roofing.png';
+import img_top_bed_bug_pros from '../assets/projects/top-bed-bug-pros.png';
+import img_atlanta_bed_bug_experts from '../assets/projects/atlanta-bed-bug-experts.png';
+import img_midwest_bed_bug from '../assets/projects/midwest-bed-bug.png';
+import img_heat_tech_pest_control from '../assets/projects/heat-tech-pest-control.png';
+import img_heat_rx from '../assets/projects/heat-rx.png';
+import img_chapman_plumbing from '../assets/projects/chapman-plumbing.png';
+import img_quarry_view_building_group from '../assets/projects/quarry-view-building-group.png';
+import img_smile_well_dental from '../assets/projects/smile-well-dental.png';
+import img_wpdllc from '../assets/projects/wpd-llc.png';
 
 export const projects: Project[] = [
   {
@@ -322,6 +337,156 @@ export const projects: Project[] = [
     category: 'CRM & Automation',
     liveLabel: 'View funnel',
   },
+{
+    slug: 'kmace-towing',
+    title: 'KMAce Towing',
+    description: 'Towing service website project.',
+    tags: [],
+    liveUrl: 'https://kmacetowing.com/',
+    image: img_kmace_towing,
+    featured: true,
+    category: 'Towing',
+  },
+  {
+    slug: 'bed-bugs-begone',
+    title: 'Bed Bugs Begone',
+    description: 'Bed bug treatment and pest control website project.',
+    tags: [],
+    liveUrl: 'https://bedbugsbegonenow.com/',
+    image: img_bed_bugs_begone,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'american-southern-exterminating',
+    title: 'American Southern Exterminating',
+    description: 'Exterminating and pest control website project.',
+    tags: [],
+    liveUrl: 'https://americansouthernexterminating.com/',
+    image: img_american_southern_exterminating,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'evergreen-lawn-pest',
+    title: 'Evergreen Lawn & Pest',
+    description: 'Lawn care and pest control website project.',
+    tags: [],
+    liveUrl: 'https://evergreen-lawn-pest.vercel.app/',
+    image: img_evergreen_lawn_pest,
+    featured: true,
+    category: 'Lawn Care',
+  },
+  {
+    slug: 'heat-bed-bugs-landing',
+    title: 'Heat Bed Bugs Landing Page',
+    description: 'Landing page project for heat-based bed bug treatment.',
+    tags: [],
+    liveUrl: 'https://landingpage-heat-bed-bugs-be-gone-n.vercel.app/',
+    image: img_heat_bed_bugs_landing,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'indy-trojan-roofing',
+    title: 'Indy Trojan Roofing',
+    description: 'Roofing company website project.',
+    tags: [],
+    liveUrl: 'https://indytrojanroofing.com/',
+    image: img_indy_trojan_roofing,
+    featured: true,
+    category: 'Roofing',
+  },
+  {
+    slug: 'top-bed-bug-pros',
+    title: 'Top Bed Bug Pros',
+    description: 'Pest control website focused on bed bug services.',
+    tags: [],
+    liveUrl: 'https://www.topbedbugpros.com/',
+    image: img_top_bed_bug_pros,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'atlanta-bed-bug-experts',
+    title: 'Atlanta Bed Bug Experts',
+    description: 'Bed bug treatment and pest control website project.',
+    tags: [],
+    liveUrl: 'https://atlantabedbugexperts.com/',
+    image: img_atlanta_bed_bug_experts,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'midwest-bed-bug',
+    title: 'Midwest Bed Bug',
+    description: 'Bed bug treatment website project.',
+    tags: [],
+    liveUrl: 'https://midwestbedbug.com/',
+    image: img_midwest_bed_bug,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'heat-tech-pest-control',
+    title: 'Heat Tech Pest Control',
+    description: 'Heat treatment and pest control website project.',
+    tags: [],
+    liveUrl: 'https://heattechpestcontrol.com/',
+    image: img_heat_tech_pest_control,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'heat-rx',
+    title: 'HeatRx',
+    description: 'Pest control website project.',
+    tags: [],
+    liveUrl: 'https://heatrx.com/',
+    image: img_heat_rx,
+    featured: true,
+    category: 'Pest Control',
+  },
+  {
+    slug: 'chapman-plumbing',
+    title: 'Chapman Plumbing',
+    description: 'Plumbing company website project.',
+    tags: [],
+    liveUrl: 'https://chapmanplumbingal.com/',
+    image: img_chapman_plumbing,
+    featured: true,
+    category: 'Plumbing',
+  },
+  {
+    slug: 'quarry-view-building-group',
+    title: 'Quarry View Building Group',
+    description: 'Construction company website built with WordPress and Elementor.',
+    tags: ['WordPress', 'Elementor'],
+    liveUrl: 'https://quarryviewbuildinggroup.com/',
+    image: img_quarry_view_building_group,
+    featured: true,
+    category: 'Construction',
+  },
+  {
+    slug: 'smile-well-dental',
+    title: 'Smile Well Dental',
+    description: 'Dental practice website project.',
+    tags: [],
+    liveUrl: 'https://www.smilewelldental.ca/',
+    image: img_smile_well_dental,
+    featured: true,
+    category: 'Dental',
+  },
+  {
+    slug: 'wpdllc',
+    title: 'WPD LLC',
+    description: 'Business website project.',
+    tags: [],
+    liveUrl: 'https://www.wpdllc.net/',
+    image: img_wpdllc,
+    featured: true,
+    category: 'Business Website',
+  },
 ];
 
 // Attach case-study detail and screenshots by slug.
@@ -329,6 +494,21 @@ for (const project of projects) Object.assign(project, caseStudies[project.slug]
 
 /** Homepage highlight order: one strong example per capability. */
 const FEATURED_ORDER = [
+  'kmace-towing',
+  'bed-bugs-begone',
+  'american-southern-exterminating',
+  'evergreen-lawn-pest',
+  'heat-bed-bugs-landing',
+  'indy-trojan-roofing',
+  'top-bed-bug-pros',
+  'atlanta-bed-bug-experts',
+  'midwest-bed-bug',
+  'heat-tech-pest-control',
+  'heat-rx',
+  'chapman-plumbing',
+  'quarry-view-building-group',
+  'smile-well-dental',
+  'wpdllc',
   'estatedocprep',
   'hidden-roots',
   'totalhomeinteriors',

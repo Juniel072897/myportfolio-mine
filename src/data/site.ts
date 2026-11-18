@@ -1,42 +1,32 @@
 /**
  * Global site constants.
- *
- * `SITE_URL` is imported by astro.config.mjs, so this module must stay free of
- * Astro-specific imports (it is evaluated in a plain Node context at build time).
+ * Keep this module free of Astro-specific imports; astro.config.mjs reads it.
  */
 
-/** Canonical origin. Update this when a custom domain is attached in Vercel. */
+/** Canonical origin for the portfolio's current public URL. */
 export const SITE_URL = 'https://dave-oyangorin-portfolio.vercel.app';
 
-export const SITE_TITLE = 'Dave Oyangorin — Website Developer, SEO & Automation Specialist';
+export const SITE_TITLE = 'Juniel Tejoc | WordPress Developer & SEO Specialist';
 
 export const SITE_DESCRIPTION =
-  'Website developer, SEO and automation specialist in the Philippines. Dave Oyangorin builds fast websites, technical SEO, and GoHighLevel CRM automation.';
+  'Juniel Tejoc is a WordPress Developer and SEO Specialist from Negros Oriental, Philippines, with 4+ years of experience in WordPress, Elementor, Astro, Sanity CMS, and search engine optimization.';
 
-/**
- * Keywords reflecting the services actually offered.
- * (The previous site carried template keywords targeting Ranchi, India — removed.)
- */
 export const SITE_KEYWORDS = [
-  'web developer',
-  'WordPress developer',
-  'SEO specialist',
-  'front-end web developer',
-  'GoHighLevel specialist',
-  'CRM automation specialist',
-  'website performance optimization',
-  'Elementor developer',
-  'Divi developer',
-  'GoHighLevel',
-  'technical SEO',
+  'Juniel Tejoc',
+  'WordPress developer Philippines',
+  'WordPress Elementor developer',
+  'Gutenberg developer',
+  'front-end developer',
+  'Astro developer',
+  'Sanity CMS developer',
+  'technical SEO specialist',
   'on-page SEO',
-  'Google Ads',
-  'website maintenance',
-  'Philippines web developer',
+  'local SEO Philippines',
+  'website performance optimization',
+  'Negros Oriental web developer',
+  'Philippines SEO specialist',
 ] as const;
 
-/** Google Tag Manager container. Public ID, loaded by src/scripts/analytics.ts. */
 export const GTM_ID = 'GTM-PZRKLMH8';
-
 export const SITE_LOCALE = 'en_US';
 export const SITE_LANG = 'en';

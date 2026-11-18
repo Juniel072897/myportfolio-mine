@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
 @import 'tailwindcss';
 
 /* ===========================================================================
@@ -15,7 +17,7 @@
 =========================================================================== */
 
 @theme {
-  --font-sans: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-sans: "Manrope", sans-serif;
   /* `font-mono` in the markup now means "route-plate label": narrowed Archivo
      caps, not a code face. */
   --font-mono: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
@@ -23,16 +25,16 @@
 
   /* The old emerald scale, remapped to enamel yellow so any decorative use of
      it lands inside the world. */
-  --color-accent-50: #fff8df;
-  --color-accent-100: #ffeeb0;
-  --color-accent-200: #ffe17a;
-  --color-accent-300: #ffd23f;
-  --color-accent-400: #f5b700;
-  --color-accent-500: #e0a600;
-  --color-accent-600: #c18e00;
-  --color-accent-700: #9a7100;
-  --color-accent-800: #735400;
-  --color-accent-900: #4d3800;
+  --color-accent-50: #fff0e9;
+  --color-accent-100: #ffd4c2;
+  --color-accent-200: #ffb18f;
+  --color-accent-300: #ff8a5b;
+  --color-accent-400: #23D1BD;
+  --color-accent-500: #dc4d20;
+  --color-accent-600: #b83d19;
+  --color-accent-700: #8f3217;
+  --color-accent-800: #672713;
+  --color-accent-900: #42190e;
 
   /* Square-cut plates, not soft cards. */
   --radius-lg: 3px;
@@ -57,9 +59,9 @@
   --rb-night: #0b0c0e;
   --rb-night-raised: #18191c;
   --rb-ink: #111214;
-  --rb-yellow: #f5b700;
-  --rb-red: #d42a1f;
-  --rb-red-lit: #ff5a4a;
+  --rb-orange: #23D1BD;
+  --rb-red: #23D1BD;
+  --rb-red-lit: #ff855f;
   --rb-white: #ffffff;
   --rb-galvanized: #eceef1;
   --rb-chrome-hi: #f2f4f7;
@@ -90,10 +92,10 @@
   --text-strong: var(--rb-ink);
   --text-body: #2a2c31;
   --text-muted: #4a4c52;
-  --accent: var(--rb-ultra);
-  --accent-contrast: var(--rb-white);
+  --accent: var(--rb-orange);
+  --accent-contrast: var(--rb-ink);
   --hot: var(--rb-red);
-  --shade-color: var(--rb-yellow);
+  --shade-color: var(--rb-orange);
   color-scheme: light;
 }
 
@@ -106,7 +108,7 @@
   --text-strong: var(--rb-white);
   --text-body: #dcdcd8;
   --text-muted: #a9a9a4;
-  --accent: var(--rb-yellow);
+  --accent: var(--rb-orange);
   --accent-contrast: var(--rb-ink);
   --hot: var(--rb-red-lit);
   --shade-color: #5b5f66;
@@ -129,7 +131,7 @@ body:has(#home) [data-nav-shell]:not(.glass) {
   --text-strong: var(--rb-white);
   --text-body: #ececea;
   --text-muted: #c4c4bf;
-  --accent: var(--rb-yellow);
+  --accent: var(--rb-orange);
   --accent-contrast: var(--rb-ink);
   --hot: var(--rb-red-lit);
   --shade-color: #5b5f66;
@@ -151,8 +153,8 @@ section.bg-\[var\(--surface-sunken\)\] .skill-group,
   --text-strong: var(--rb-ink);
   --text-body: #2a2c31;
   --text-muted: #4a4c52;
-  --accent: var(--rb-ultra);
-  --accent-contrast: var(--rb-white);
+  --accent: var(--rb-orange);
+  --accent-contrast: var(--rb-ink);
   --hot: var(--rb-red);
 }
 
@@ -165,21 +167,21 @@ section.bg-\[var\(--surface-sunken\)\] .skill-group,
   --text-strong: var(--rb-white);
   --text-body: #dcdcd8;
   --text-muted: #a9a9a4;
-  --accent: var(--rb-yellow);
+  --accent: var(--rb-orange);
   --accent-contrast: var(--rb-ink);
   --hot: var(--rb-red-lit);
 }
 
 /* Enamel-yellow board: the closing contact sign, in both themes. */
 #contact > .container-page > div {
-  --surface-raised: var(--rb-yellow);
-  --surface: var(--rb-yellow);
+  --surface-raised: var(--rb-orange);
+  --surface: var(--rb-orange);
   --border-subtle: rgb(10 10 12 / 0.4);
   --text-strong: var(--rb-ink);
   --text-body: #1c1d20;
   --text-muted: #2a2b2e;
   --accent: var(--rb-ink);
-  --accent-contrast: var(--rb-yellow);
+  --accent-contrast: var(--rb-orange);
   --hot: #9e0015;
   --shade-color: var(--rb-white);
 }
@@ -193,21 +195,21 @@ article.group:focus-within {
   --text-strong: var(--rb-white);
   --text-body: #ececea;
   --text-muted: #c4c4bf;
-  --accent: var(--rb-yellow);
+  --accent: var(--rb-orange);
   --accent-contrast: var(--rb-ink);
-  --hot: var(--rb-yellow);
+  --hot: var(--rb-orange);
 }
 
 :root[data-theme='dark'] article.group:hover,
 :root[data-theme='dark'] article.group:focus-within {
-  --surface-raised: var(--rb-yellow);
-  --surface: #ffd23f;
+  --surface-raised: var(--rb-orange);
+  --surface: #ff8a5b;
   --border-subtle: rgb(10 10 12 / 0.4);
   --text-strong: var(--rb-ink);
   --text-body: #1c1d20;
   --text-muted: #2a2b2e;
   --accent: var(--rb-ink);
-  --accent-contrast: var(--rb-yellow);
+  --accent-contrast: var(--rb-orange);
   --hot: var(--rb-ink);
 }
 
@@ -238,7 +240,7 @@ article.group:focus-within {
   }
 
   :root[data-theme='dark'] {
-    scrollbar-color: var(--rb-yellow) var(--rb-night);
+    scrollbar-color: var(--rb-orange) var(--rb-night);
   }
 
   body {
@@ -250,7 +252,7 @@ article.group:focus-within {
   }
 
   ::selection {
-    background-color: var(--rb-yellow);
+    background-color: var(--rb-orange);
     color: var(--rb-ink);
   }
 
@@ -499,7 +501,7 @@ body > footer h2 {
   bottom: 0;
   height: 10px;
   background:
-    linear-gradient(var(--rb-yellow), var(--rb-yellow)) top / 100% 6px no-repeat,
+    linear-gradient(var(--rb-orange), var(--rb-orange)) top / 100% 6px no-repeat,
     var(--rb-chrome-trim) bottom / 100% 4px no-repeat;
 }
 
@@ -526,7 +528,7 @@ body:has(#home) > div.h-20[aria-hidden='true'] {
   color: var(--rb-ink);
   font-size: 0.78rem;
   padding: 0.45rem 0.8rem 0.4rem;
-  box-shadow: inset 0 -3px 0 var(--rb-yellow);
+  box-shadow: inset 0 -3px 0 var(--rb-orange);
 }
 
 #home p[data-hero].rounded-full .rounded-full {
@@ -547,7 +549,7 @@ body:has(#home) > div.h-20[aria-hidden='true'] {
 #home [data-hero-frame] {
   border-radius: 4px;
   border: 0;
-  background-color: var(--rb-yellow);
+  background-color: var(--rb-orange);
 }
 
 html.no-js [data-hero-frame] {
@@ -726,9 +728,9 @@ div[role='img'][aria-label$='no preview image available'] {
   border-radius: 2px;
   box-shadow:
     inset 0 0 0 8px var(--rb-ultra),
-    inset 0 0 0 9.5px var(--rb-yellow),
+    inset 0 0 0 9.5px var(--rb-orange),
     inset 0 0 0 12px var(--rb-ultra),
-    inset 0 0 0 13px var(--rb-yellow);
+    inset 0 0 0 13px var(--rb-orange);
 }
 
 /* The blank plate fills its frame edge to edge; no plate inside a plate. */
@@ -742,7 +744,7 @@ div[role='img'][aria-label$='no preview image available'] > span {
   font-weight: 400;
   font-size: clamp(2.4rem, 1.6rem + 2vw, 3.4rem);
   letter-spacing: 0.04em;
-  color: var(--rb-yellow);
+  color: var(--rb-orange);
   opacity: 1;
   text-shadow: 0.07em 0.07em 0 #5b5f66;
 }
@@ -798,7 +800,7 @@ div[role='img'][aria-label$='no preview image available'] > span {
   border-radius: 3px;
   background-color: var(--surface);
   box-shadow:
-    inset 0 4px 0 var(--rb-yellow),
+    inset 0 4px 0 var(--rb-orange),
     var(--shadow-card);
 }
 
@@ -812,9 +814,9 @@ div[role='img'][aria-label$='no preview image available'] > span {
   left: 5px;
   background: linear-gradient(
     90deg,
-    var(--rb-yellow) 0 1.5px,
+    var(--rb-orange) 0 1.5px,
     transparent 1.5px 3.5px,
-    var(--rb-yellow) 3.5px 5px
+    var(--rb-orange) 3.5px 5px
   );
 }
 
@@ -828,7 +830,7 @@ div[role='img'][aria-label$='no preview image available'] > span {
   );
   box-shadow:
     0 0 0 2px var(--rb-ultra),
-    0 0 0 3.5px var(--rb-yellow);
+    0 0 0 3.5px var(--rb-orange);
 }
 
 #experience article {
@@ -850,9 +852,9 @@ div[role='img'][aria-label$='no preview image available'] > span {
   border-radius: 4px;
   border: 0;
   box-shadow:
-    inset 0 0 0 10px var(--rb-yellow),
+    inset 0 0 0 10px var(--rb-orange),
     inset 0 0 0 12px var(--rb-ink),
-    inset 0 0 0 16px var(--rb-yellow),
+    inset 0 0 0 16px var(--rb-orange),
     inset 0 0 0 17px var(--rb-ink);
 }
 
@@ -927,7 +929,7 @@ a[aria-label$='(opens in a new tab)'].rounded-xl:hover {
 body > footer {
   border-top: 0;
   box-shadow:
-    inset 0 6px 0 var(--rb-yellow),
+    inset 0 6px 0 var(--rb-orange),
     inset 0 10px 0 var(--rb-chrome);
 }
 
@@ -1000,22 +1002,22 @@ div:has(> [data-scroll-progress]) {
 }
 
 [data-scroll-progress] {
-  background-color: var(--rb-yellow);
+  background-color: var(--rb-orange);
   box-shadow: 0 1px 0 var(--rb-ink);
 }
 
 button[data-back-to-top] {
   border-radius: 3px;
   background-color: var(--rb-ultra);
-  color: var(--rb-yellow);
+  color: var(--rb-orange);
   border: 0;
   box-shadow:
-    inset 0 -3px 0 var(--rb-yellow),
+    inset 0 -3px 0 var(--rb-orange),
     0 10px 20px -10px rgb(0 0 0 / 0.6);
 }
 
 button[data-back-to-top]:hover {
-  background-color: var(--rb-yellow);
+  background-color: var(--rb-orange);
   color: var(--rb-ink);
 }
 
@@ -1159,7 +1161,7 @@ a[href='#main']:focus {
   border-radius: 3px;
   background-color: var(--surface-raised);
   box-shadow:
-    inset 0 4px 0 var(--rb-yellow),
+    inset 0 4px 0 var(--rb-orange),
     var(--shadow-card);
 }
 
@@ -1221,7 +1223,7 @@ article.group > .card-media.is-screen {
   margin-top: 1rem;
   padding: 1.25rem 1.4rem;
   border-radius: 3px;
-  background-color: var(--rb-yellow);
+  background-color: var(--rb-orange);
   color: var(--rb-ink);
 }
 
@@ -1297,7 +1299,7 @@ h2.cs-heading::before {
   width: 0.6rem;
   height: 0.6rem;
   margin-right: 0.6rem;
-  background-color: var(--rb-yellow);
+  background-color: var(--rb-orange);
   vertical-align: 0.05em;
 }
 
@@ -1411,7 +1413,7 @@ h2.cs-heading::before {
   height: 2.1rem;
   padding-inline: 0.85rem;
   background-color: var(--rb-ultra);
-  border-bottom: 3px solid var(--rb-yellow);
+  border-bottom: 3px solid var(--rb-orange);
 }
 
 .screen-dots {
@@ -1449,4 +1451,98 @@ h2.cs-heading::before {
 
 .screen-frame.is-mobile img {
   border-radius: 1.3rem;
+}
+
+
+/* ========================================
+   Global Manrope Typography
+   ======================================== */
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Manrope", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h3 {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+p, li {
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+}
+
+button, a {
+  font-family: "Manrope", sans-serif;
+}
+
+
+
+/* Clean typography: remove text shadows and keep headings minimal */
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, a, button, label, li {
+  text-shadow: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+  text-shadow: none !important;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h3 {
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+p, li {
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+  text-shadow: none !important;
 }

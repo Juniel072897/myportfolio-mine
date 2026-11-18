@@ -15,7 +15,7 @@ import Icon from '../icons/Icon.astro';
 >
   <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {
-      featuredProjects.map((project, index) => (
+      featuredProjects.slice(0, 6).map((project, index) => (
         <div class="flex" data-reveal data-reveal-scale style={`--reveal-delay: ${(index % 3) * 90}ms`}>
           <ProjectCard project={project} />
         </div>
@@ -25,7 +25,7 @@ import Icon from '../icons/Icon.astro';
 
   <div class="mt-12 flex justify-center" data-reveal>
     <Button href="/projects/" variant="secondary" size="lg">
-      View all {projects.length} projects
+      View all projects
       <Icon name="arrow-right" size={18} />
     </Button>
   </div>

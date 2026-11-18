@@ -22,7 +22,15 @@ export type ProjectCategory =
   | 'Website Development'
   | 'SEO & Digital Marketing'
   | 'CRM & Automation'
-  | 'E-commerce';
+  | 'E-commerce'
+  | 'Pest Control'
+  | 'Towing'
+  | 'Lawn Care'
+  | 'Roofing'
+  | 'Plumbing'
+  | 'Construction'
+  | 'Dental'
+  | 'Business Website';
 
 /**
  * Case-study detail. Every field is optional and a section renders only when
