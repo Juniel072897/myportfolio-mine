@@ -2,7 +2,6 @@
 /** Sticky header: brand, desktop nav with scroll-spy, theme toggle, mobile menu. */
 import { navItems } from '../../data/nav';
 import { profile } from '../../data/profile';
-import ThemeToggle from '../ui/ThemeToggle.astro';
 import Icon from '../icons/Icon.astro';
 
 const currentPath = Astro.url.pathname;
@@ -51,8 +50,6 @@ const isProjectsRoute = currentPath.startsWith('/projects');
       </ul>
 
       <div class="flex items-center gap-2">
-        <ThemeToggle />
-
         <button
           type="button"
           data-menu-toggle
