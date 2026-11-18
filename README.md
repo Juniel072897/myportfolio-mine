@@ -1,4 +1,4 @@
-# Dave Oyangorin — Portfolio
+# Juniel Tejoc — Portfolio
 
 Static portfolio built with **Astro**, **TypeScript**, and **Tailwind CSS v4**.
 No framework runtime, no database, no CMS, no content APIs — every piece of content
